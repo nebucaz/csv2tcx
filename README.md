@@ -14,4 +14,5 @@ In order to be able to upload the training session into my strava account, the d
 Open the python script and change the name/path of the csv file to be converted (at the bottom). Also check the output filename/location at the top of the file.
 
 ## Notice
-This script was written to convert the values of a Kettler Racer 9. Due to limitations on the display, the *duration*  overflows at 5999 which has been compensated in the script. 
+* This script was written to convert the values of a Kettler Racer 9. Due to limitations on the display, the *duration*  overflows at 5999 which has been compensated in the script. 
+* The script assumes that the date time of the training session is encded in the filename and can be extracted to create the Id of the tcx-file (which is mandatory)
