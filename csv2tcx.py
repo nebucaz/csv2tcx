@@ -1,5 +1,7 @@
 #
+# Schema: https://www8.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd
 #
+# © 2020 nebucaz
 
 import csv
 import re
@@ -20,7 +22,7 @@ def convert(filename):
 
     m = re.match('([a-zA-z0-9\_\-]+)\.csv', filename)
     sessionName = m.group(1)
-    xmlFilename = '/Users/neo/Desktop/' + sessionName + ".xml"
+    xmlFilename = sessionName + ".tcx"
     print(sessionName)
 
     # get ID from filename
@@ -88,12 +90,3 @@ def convert(filename):
 
 
 convert('kracer9_2020-01-12_1442.csv')
-convert('kracer9_2020-01-13_1835.csv')
-convert('kracer9_2020-01-14_0648.csv')
-
-# tree = xml.ElementTree(root)
-# with open(filename, "w") as fh:
-#     tree.write(fh)
-
-# Schema: https://www8.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd
-# example
